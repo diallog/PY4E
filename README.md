@@ -1,2 +1,2 @@
 # PY4E
-from the Python for Everyone course
+from the Python for Everybody course
