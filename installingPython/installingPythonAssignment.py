@@ -1,1 +1,1 @@
-print("Assignment #1 is done!")
+print('Assignment #1 is done!')
