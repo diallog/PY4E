@@ -15,4 +15,4 @@ rate = float(rate)
 pay = hrs * rate
 
 # output
-print("Pay: " + pay)
+print("Pay: " + str(pay))
