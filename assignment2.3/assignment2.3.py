@@ -7,12 +7,12 @@ print("Alright, let's do our first calculation in Python using information obtai
 # This first line is provided for you
 
 hrs = input("Please enter the number of hours worked: ")
-hrs = float(hrs)
+# hrs = float(hrs)
 rate = input("Thank you. Now enter the rate ($/hr): ")
-rate = float(rate)
+# rate = float(rate)
 
 # calculation...
-pay = hrs * rate
+pay = float(hrs) * float(rate)
 
 # output
 print("Pay: " + str(pay))
