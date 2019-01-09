@@ -2,7 +2,7 @@
 
 # This script begins with a hint from the course...but lets do a little over-achievement.
 
-print("Alright, let's do our first calculation in Python using information obtained from the user.")
+print("Alright, let's do our first calculation in Python using information obtained from the user.\r")
 
 # This first line is provided for you
 
