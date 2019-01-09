@@ -8,6 +8,7 @@ print("Alright, let's do our first calculation in Python using information obtai
 
 hrs = input("Please enter the number of hours worked: ")
 rate = input("Thank you. Now enter the rate ($/hr): ")
+rate = float(rate)
 
 # calculation...
 pay = hrs * rate
