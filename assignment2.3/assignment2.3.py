@@ -15,4 +15,6 @@ rate = input("Thank you. Now enter the rate ($/hr): ")
 pay = float(hrs) * float(rate)
 
 # output
-print("Pay: " + str(pay))
+# print("Pay: " + str(pay))
+# alternative approach
+print("Pay:", pay)
