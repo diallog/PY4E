@@ -3,6 +3,8 @@
 
 # Constants
 overtimeRate = 1.5
+otThreshold = 40
+rate = 10.50
 
 # Obtain how many hours the user worked
 hrs = input ("Enter Hours: ")
@@ -12,3 +14,12 @@ try:
 	hrs = float(hrs)
 except:
 	print("Floating point conversion failed.")
+
+# Calculate wages
+if hrs <= otThreshold
+	wages = hrs * rate
+else
+	wages = hrs * rate * overtimeRate
+
+# output
+print(wages)
