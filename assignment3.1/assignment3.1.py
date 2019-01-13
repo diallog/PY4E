@@ -21,9 +21,8 @@ if hrs <= otThreshold:
 	wages = hrs * rate
 else:
 	otHrs = hrs - otThreshold
-#	wages = (hrs * rate) + (otHrs * rate * overtimeRate)
-	wages = (hrs * rate)
+	wages = (otThreshold * rate) + (otHrs * rate * overtimeRate)
 
 # output
-print("Overtime hours worked: ", otHrs)
+# print("Overtime hours worked: ", otHrs)
 print(wages)
