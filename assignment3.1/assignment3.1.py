@@ -4,15 +4,19 @@
 # Constants
 overtimeRate = 1.5
 otThreshold = 40
-rate = 10.50
+# rate = 10.50
 otHrs = 0
 
 # Obtain how many hours the user worked
 hrs = input("Enter Hours: ")
 
+# Obtain the employees rate
+rate = input("Please enter your current rate ($/hr): ")
+
 # convert input string to float
 try:
 	hrs = float(hrs)
+	rate = float(rate)
 except:
 	print("Floating point conversion failed.")
 
