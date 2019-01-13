@@ -11,10 +11,10 @@ otHrs = 0
 hrs = input ("Enter Hours: ")
 
 # convert input string to float
-try:
-	hrs = float(hrs)
-except:
-	print("Floating point conversion failed.")
+# try:
+hrs = float(hrs)
+# except:
+#	print("Floating point conversion failed.")
 
 # Calculate wagesß
 if hrs <= otThreshold:
