@@ -15,10 +15,10 @@ try:
 except:
 	print("Floating point conversion failed.")
 
-# Calculate wages
-if hrs <= otThreshold :
+# Calculate wagesß
+if hrs <= otThreshold:
 	wages = hrs * rate
-else
+else:
 	wages = hrs * rate * overtimeRate
 
 # output
