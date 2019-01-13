@@ -5,6 +5,7 @@
 overtimeRate = 1.5
 otThreshold = 40
 rate = 10.50
+otHrs = 0
 
 # Obtain how many hours the user worked
 hrs = input ("Enter Hours: ")
@@ -19,7 +20,8 @@ except:
 if hrs <= otThreshold:
 	wages = hrs * rate
 else:
-	wages = hrs * rate * overtimeRate
+	otHrs = hrs - otThreshold
+	wages = (hrs * rate) + (otHrs * rate * overtimeRate)
 
 # output
 print(wages)
