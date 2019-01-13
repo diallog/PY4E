@@ -24,4 +24,5 @@ else:
 	wages = (hrs * rate) + (otHrs * rate * overtimeRate)
 
 # output
+print("Overtime hours worked: ", otHrs)
 print(wages)
