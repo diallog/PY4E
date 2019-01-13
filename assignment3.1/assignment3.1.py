@@ -8,21 +8,20 @@ rate = 10.50
 otHrs = 0
 
 # Obtain how many hours the user worked
-hrs = input ("Enter Hours: ")
+hrs = input("Enter Hours: ")
 
 # convert input string to float
-# try:
-hrs = float(hrs)
-# except:
-#	print("Floating point conversion failed.")
+try:
+	hrs = float(hrs)
+except:
+	print("Floating point conversion failed.")
 
-# Calculate wagesß
+# Calculate wages
 if hrs <= otThreshold:
 	wages = hrs * rate
 else:
 	otHrs = hrs - otThreshold
 	wages = (otThreshold * rate) + (otHrs * rate * overtimeRate)
 
-# output
-# print("Overtime hours worked: ", otHrs)
+# Output
 print(wages)
