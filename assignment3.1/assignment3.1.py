@@ -16,7 +16,7 @@ except:
 	print("Floating point conversion failed.")
 
 # Calculate wages
-if hrs <= otThreshold
+if hrs <= otThreshold :
 	wages = hrs * rate
 else
 	wages = hrs * rate * overtimeRate
