@@ -32,7 +32,7 @@ elif studentScore >= gradeC:
 	print("C")
 elif studentScore >= gradeD:
 	print("D")
-else studentScore < gradeD:
+else:
 	print("F")
 
 # end run
