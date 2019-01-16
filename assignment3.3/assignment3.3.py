@@ -23,6 +23,7 @@ try:
 	studentScore = float(studentScore)
 except:
 	print("The score provided does not represent a numerical value. Please re-run the program and modify your input so that it complies with the reuqirements: a decimal number between 0.0 and 1.0, e.g. if your score is 90, please enter it as 0.9.")
+	quit()
 
 if studentScore >= gradeA:
 	print("A")
