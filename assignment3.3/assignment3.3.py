@@ -9,6 +9,10 @@
 
 # initialize constants
 studentScore = 0.0
+gradeA = 0.9
+gradeB = 0.8
+gradeC = 0.7
+gradeD = 0.6
 
 # get input from student
 
@@ -16,6 +20,19 @@ studentScore = input("Please enter our score as a decimal number between 0.0 and
 
 #convert input string to a float
 try:
-	# test code
+	studentScore = float(studentScore)
 except:
-	# write an error message
+	print("The score provided does not represent a numerical value. Please re-run the program and modify your input so that it complies with the reuqirements: a decimal number between 0.0 and 1.0, e.g. if your score is 90, please enter it as 0.9.")
+
+if studentScore >= gradeA:
+	print("A")
+elif studentScore >= gradeB:
+	print("B")
+elif studentScore >= gradeC:
+	print("C")
+elif studentScore >= gradeD:
+	print("D")
+else studentScore < gradeD:
+	print("F")
+
+# end run
