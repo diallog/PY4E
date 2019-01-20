@@ -16,9 +16,12 @@ rate = input("Please enter your current rate ($/hr): ")
 # convert input string to float
 try:
 	hrs = float(hrs)
+except:
+	print("Floating point conversion failed for Hours Worked.")
+try:
 	rate = float(rate)
 except:
-	print("Floating point conversion failed.")
+	print("Floating point conversion failed for Rate of Pay.")
 
 # Calculate wages
 if hrs <= otThreshold:
