@@ -36,5 +36,5 @@ else:
 	wages = computePay(otHrs,payRate)
 
 # Output
-print("The wages for the current period are: ",wages)
-# Use this after passing tests print(wages)
+# print("The wages for the current period are: ",wages)
+print(wages)
