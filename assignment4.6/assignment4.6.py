@@ -8,7 +8,7 @@ hrs = 0.0 # NOTE: will this break input()
 payRate = 0.0
 
 # Define functions
-def computePay(oHrs,oRate)
+def computePay(oHrs,oRate):
 	oPay = (otThreshold * oRate) + (oHrs * oRate * overtimeRate)
 	return oPay
 
