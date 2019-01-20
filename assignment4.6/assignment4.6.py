@@ -33,7 +33,7 @@ if hrs <= otThreshold:
 	wages = hrs * payRate
 else:
 	otHrs = hrs - otThreshold
-	wages = computerPay(otHrs,payRate)
+	wages = computePay(otHrs,payRate)
 
 # Output
 print("The wages for the current period are: ",wages)
