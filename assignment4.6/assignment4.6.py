@@ -4,7 +4,7 @@
 overtimeRate = 1.5 # multiuplier for overtime hours
 otThreshold = 40.0
 otHrs = 0.0
-hrs = 0.0 # NOTE: will this break input()???
+hrs = 0.0
 payRate = 0.0
 
 # Define functions
