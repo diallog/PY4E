@@ -10,3 +10,20 @@ def isInteger(x):
 	else:
 		# x is an integer and program execution can proceed
 		print(even) # temporary statement
+
+# Initialize variables
+
+smallest = None # variable holds current smallest value
+largest = None # variable holds current largest value
+newNumber = 0 # variable holds new input for testing
+
+# Obtain input from user
+print('''
+===========================================================================
+| The objective of this program will be gathering numeric input from the  |
+| user and returning the largest and smallest value. The input should     |
+| be limited to integer numbers, i.e. whole-numbers. When the user has    |
+| no more input, they can finish by typing 'done'                         |
+===========================================================================
+''')
+newNumber = input('Give another number or "done"')
