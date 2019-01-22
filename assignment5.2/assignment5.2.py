@@ -16,14 +16,33 @@ def isInteger(x):
 smallest = None # variable holds current smallest value
 largest = None # variable holds current largest value
 newNumber = 0 # variable holds new input for testing
+request = True
 
-# Obtain input from user
+# Obtain input from user and test values
 print('''
 ===========================================================================
 | The objective of this program will be gathering numeric input from the  |
 | user and returning the largest and smallest value. The input should     |
 | be limited to integer numbers, i.e. whole-numbers. When the user has    |
-| no more input, they can finish by typing 'done'                         |
+| no more input, they can finish by typing 'done'.                        |
 ===========================================================================
 ''')
-newNumber = input('Give another number or "done"')
+
+while request is True:
+	newNumber = input('Give another number or "done": ')
+	if newNumber = 'done':
+		request = False
+		break # this may go in a different place
+	else:
+		try:
+			newNumber = float(newNumber)
+		except:
+			print('''
+			The user-provided input should be a whole-number. Please
+			try again.
+			''')
+			continue
+		# test to see if newNumber is an integer
+		isInteger(newNumber)
+
+# Temporary end of program execution
