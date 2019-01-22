@@ -49,7 +49,7 @@ while request is True:
 		if isIntegerResult == 1:
 			intNewNumber = int(floatNewNumber)
 			print(intNewNumber) # remove upon completion
-			if smallest or largest is None
+			if (smallest or largest) is None:
 				smallest = intNewNumber
 				largest = intNewNumber
 				print('Value of "smallest" is:',smallest)
