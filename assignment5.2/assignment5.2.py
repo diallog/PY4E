@@ -3,19 +3,24 @@
 # Define function for integer test
 
 def isInteger(x):
-	even = 2 * x
-	if (even % 2) > 0:
+	maybeEven = 2 * x
+	if (maybeEven % 2) > 0:
 		# x is not an integer and the user must provide a different input value, i.e. input must be an integer
-		print(even) # temporary statement
+		print(maybeEven,'- You did not provide a whole-number.') # temporary statement
+		return 0
 	else:
 		# x is an integer and program execution can proceed
-		print(even) # temporary statement
+		print(maybeEven, '- Congratulations! You provided a whole number.') # temporary statement
+		return 1
 
 # Initialize variables
 
 smallest = None # variable holds current smallest value
 largest = None # variable holds current largest value
 newNumber = 0 # variable holds new input for testing
+floatNewNumber = 0.0 # new input converted to float
+intNewNumber = 0 # new input converted to integer
+isIntegerResult = 0 # receives return value from isInteger()
 request = True
 
 # Obtain input from user and test values
@@ -29,20 +34,27 @@ print('''
 ''')
 
 while request is True:
-	newNumber = input('Give another number or "done": ')
-	if newNumber = 'done':
+	newNumber = input('Give a number or "done": ')
+	if newNumber == 'done':
 		request = False
 		break # this may go in a different place
 	else:
 		try:
-			newNumber = float(newNumber)
+			floatNewNumber = float(newNumber)
 		except:
-			print('''
-			The user-provided input should be a whole-number. Please
-			try again.
-			''')
+			print('''The user-provided input should be a whole-number. Please try again.''')
 			continue
-		# test to see if newNumber is an integer
-		isInteger(newNumber)
+		# test to see if floatNewNumber is an integer
+		isIntegerResult = isInteger(floatNewNumber)
+		if isIntegerResult == 1:
+			intNewNumber = int(floatNewNumber)
+			print(intNewNumber) # remove upon completion
+			if smallest or largest is None
+				smallest = intNewNumber
+				largest = intNewNumber
+				print('Value of "smallest" is:',smallest)
+				print('Value of "largest" is:',largest)
+		else:
+			continue
 
 # Temporary end of program execution
