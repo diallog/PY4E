@@ -24,6 +24,7 @@ def isInteger(possibleInt):
 		print(maybeEven, '- Congratulations! You provided a whole number.') # temporary statement
 		return 1
 
+
 # def valueCompare(value):
 	# modifies stored values of smallest and largest based upon comparison
 	# if value < smallest:
@@ -50,7 +51,8 @@ while request is True:
 		try:
 			floatNewNumber = float(newNumber)
 		except:
-			print('''The user-provided input should be a whole-number. Please try again.''')
+			# print('''The user-provided input should be a whole-number. Please try again.''') - this was my original version
+			print('Invalid input') # this is the version required for credit (to match output in the auto grader)
 			continue
 		# test to see if floatNewNumber is an integer
 		isIntegerResult = isInteger(floatNewNumber)
@@ -61,7 +63,7 @@ while request is True:
 				smallest = intNewNumber
 				largest = intNewNumber
 			else:
-				# valueCompare(intNewNumber)
+				# valueCompare(intNewNumber) - this function needs correction before it can be used
 				if intNewNumber < smallest:
 					smallest = intNewNumber
 				elif intNewNumber > largest:
@@ -69,6 +71,6 @@ while request is True:
 		else:
 			continue
 
-print('The largest number is:',largest)
-print('The smallest number is:',smallest)
+print('Maximum is',largest)
+print('Minimum is',smallest)
 # Temporary end of program execution
