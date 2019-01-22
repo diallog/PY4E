@@ -24,7 +24,7 @@ def isInteger(possibleInt):
 		print(maybeEven, '- Congratulations! You provided a whole number.') # temporary statement
 		return 1
 
-def valueCompare(value)
+def valueCompare(value):
 	# modifies stored values of smallest and largest based upon comparison
 	if value < smallest:
 		smallest = value
