@@ -17,11 +17,11 @@ def isInteger(possibleInt):
 	maybeEven = 2 * possibleInt
 	if (maybeEven % 2) > 0:
 		# x is not an integer and the user must provide a different input value, i.e. input must be an integer
-		print(maybeEven,'- You did not provide a whole-number.') # temporary statement
+		# print(maybeEven,'- You did not provide a whole-number.') # temporary statement
 		return 0
 	else:
 		# x is an integer and program execution can proceed
-		print(maybeEven, '- Congratulations! You provided a whole number.') # temporary statement
+		# print(maybeEven, '- Congratulations! You provided a whole number.') # temporary statement
 		return 1
 
 
@@ -58,7 +58,6 @@ while request is True:
 		isIntegerResult = isInteger(floatNewNumber)
 		if isIntegerResult == 1:
 			intNewNumber = int(floatNewNumber)
-			print(intNewNumber) # remove upon completion
 			if (smallest or largest) is None:
 				smallest = intNewNumber
 				largest = intNewNumber
