@@ -1,18 +1,5 @@
 # Assignment 5.2 Write a program that repeatedly prompts a user for integer numbers until the user enters 'done'. Once 'done' is entered, print out the largest and smallest of the numbers. If the user enters anything other than a valid number catch it with a try/except and put out an appropriate message and ignore the number. Enter 7, 2, bob, 10, and 4 and match the output below.
 
-# Define function for integer test
-
-def isInteger(x):
-	maybeEven = 2 * x
-	if (maybeEven % 2) > 0:
-		# x is not an integer and the user must provide a different input value, i.e. input must be an integer
-		print(maybeEven,'- You did not provide a whole-number.') # temporary statement
-		return 0
-	else:
-		# x is an integer and program execution can proceed
-		print(maybeEven, '- Congratulations! You provided a whole number.') # temporary statement
-		return 1
-
 # Initialize variables
 
 smallest = None # variable holds current smallest value
@@ -22,6 +9,27 @@ floatNewNumber = 0.0 # new input converted to float
 intNewNumber = 0 # new input converted to integer
 isIntegerResult = 0 # receives return value from isInteger()
 request = True
+
+# Define function(s)
+
+def isInteger(possibleInt):
+	# tests to see if user-provided input is an integer
+	maybeEven = 2 * possibleInt
+	if (maybeEven % 2) > 0:
+		# x is not an integer and the user must provide a different input value, i.e. input must be an integer
+		print(maybeEven,'- You did not provide a whole-number.') # temporary statement
+		return 0
+	else:
+		# x is an integer and program execution can proceed
+		print(maybeEven, '- Congratulations! You provided a whole number.') # temporary statement
+		return 1
+
+def valueCompare(value)
+	# modifies stored values of smallest and largest based upon comparison
+	if value < smallest:
+		smallest = value
+	elif value > largest:
+		largest = value
 
 # Obtain input from user and test values
 print('''
@@ -52,9 +60,11 @@ while request is True:
 			if (smallest or largest) is None:
 				smallest = intNewNumber
 				largest = intNewNumber
-				print('Value of "smallest" is:',smallest)
-				print('Value of "largest" is:',largest)
+			else:
+				valueCompare(intNewNumber)
 		else:
 			continue
 
+print('The largest number is:',largest)
+print('The smallest number is:',smallest)
 # Temporary end of program execution
