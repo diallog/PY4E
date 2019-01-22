@@ -72,4 +72,3 @@ while request is True:
 
 print('Maximum is',largest)
 print('Minimum is',smallest)
-# Temporary end of program execution
