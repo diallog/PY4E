@@ -24,12 +24,12 @@ def isInteger(possibleInt):
 		print(maybeEven, '- Congratulations! You provided a whole number.') # temporary statement
 		return 1
 
-def valueCompare(value):
+# def valueCompare(value):
 	# modifies stored values of smallest and largest based upon comparison
-	if value < smallest:
-		smallest = value
-	elif value > largest:
-		largest = value
+	# if value < smallest:
+		# smallest = value
+	# elif value > largest:
+		# largest = value
 
 # Obtain input from user and test values
 print('''
@@ -61,7 +61,11 @@ while request is True:
 				smallest = intNewNumber
 				largest = intNewNumber
 			else:
-				valueCompare(intNewNumber)
+				# valueCompare(intNewNumber)
+				if intNewNumber < smallest:
+					smallest = intNewNumber
+				elif intNewNumber > largest:
+					largest = intNewNumber
 		else:
 			continue
 
