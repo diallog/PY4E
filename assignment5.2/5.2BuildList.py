@@ -47,3 +47,5 @@ while request is True:
 			continue
 
 print(numbersToTest)
+max(numbersToTest)
+min(numbersToTest)
