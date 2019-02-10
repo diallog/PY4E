@@ -49,3 +49,5 @@ while request is True:
 print(numbersToTest)
 print('Maximum is', max(numbersToTest))
 print('Minimum is', min(numbersToTest))
+
+# This script addresses required functionality for assignment 5.2.
