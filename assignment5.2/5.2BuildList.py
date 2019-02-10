@@ -9,7 +9,6 @@ intNewNumber = 0 # new input converted to integer
 isIntegerResult = 0 # receives return value from isInteger()
 numbersToTest = list() # list created by user input
 request = True
-i = 0 # index
 
 # Define function(s)
 
@@ -42,8 +41,7 @@ while request is True:
 		isIntegerResult = isInteger(floatNewNumber)
 		if isIntegerResult == 1:
 			intNewNumber = int(floatNewNumber)
-			numbersToTest[i] = intNewNumber
-			i = i + 1
+			numbersToTest.append(intNewNumber)
 		else:
 			# user did not provide an integer; they need to provide a new value
 			continue
