@@ -33,14 +33,14 @@ def isInteger(possibleInt):
 		# largest = value
 
 # Obtain input from user and test values
-# print('''
-# ===========================================================================
-# | The objective of this program will be gathering numeric input from the  |
-# | user and returning the largest and smallest value. The input should     |
-# | be limited to integer numbers, i.e. whole-numbers. When the user has    |
-# | no more input, they can finish by typing 'done'.                        |
-# ===========================================================================
-# ''')
+print('''
+===========================================================================
+| The objective of this program will be gathering numeric input from the  |
+| user and returning the largest and smallest value. The input should     |
+| be limited to integer numbers, i.e. whole-numbers. When the user has    |
+| no more input, they can finish by typing 'done'.                        |
+===========================================================================
+''')
 
 while request is True:
 	newNumber = input('Give a number or "done": ')
@@ -58,10 +58,15 @@ while request is True:
 		isIntegerResult = isInteger(floatNewNumber)
 		if isIntegerResult == 1:
 			intNewNumber = int(floatNewNumber)
-			if intNewNumber is None or intNewNumber < smallest:
+			if (smallest or largest) is None:
 				smallest = intNewNumber
-			elif intNewNumber is None or intNewNumber > largest:
 				largest = intNewNumber
+			else:
+				# valueCompare(intNewNumber) - this function needs correction before it can be used
+				if intNewNumber < smallest:
+					smallest = intNewNumber
+				elif intNewNumber > largest:
+					largest = intNewNumber
 		else:
 			continue
 
