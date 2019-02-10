@@ -22,7 +22,7 @@ while request is True:
 			continue
 		if largest is None or intNewNumber > largest:
 			largest = intNewNumber
-		elif smallest is None or listValue < smallest:
+		elif smallest is None or intNewNumber < smallest:
 			smallest = intNewNumber
 		continue
 
