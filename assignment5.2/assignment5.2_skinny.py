@@ -35,17 +35,12 @@ print('''
 ''')
 
 newNumber = input('Give a number or "done": ')
-if newNumber == 'done':
-	# request = False
-	break
-else:
+if newNumber != 'done':
 	try:
 		floatNewNumber = float(newNumber)
 	except:
 		print('''The user-provided input should be a whole-number. Please try again.''')
 		# print('Invalid input') # this is the version required for credit (to match output in the auto grader)
-		continue
-	# test to see if floatNewNumber is an integer
 	isIntegerResult = isInteger(floatNewNumber)
 	if isIntegerResult == 1:
 		intNewNumber = int(floatNewNumber)
@@ -57,9 +52,7 @@ else:
 			if intNewNumber < smallest:
 				smallest = intNewNumber
 			elif intNewNumber > largest:
-				largest = intNewNumber
-	else:
-		continue
+					largest = intNewNumber
 
 print('Maximum is',largest)
 print('Minimum is',smallest)
