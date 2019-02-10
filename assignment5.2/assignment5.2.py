@@ -25,23 +25,12 @@ def isInteger(possibleInt):
 		# print(maybeEven, '- Congratulations! You provided a whole number.') # temporary statement
 		return 1
 
-# Obtain input from user and test values
-# print('''
-# ===========================================================================
-# | The objective of this program will be gathering numeric input from the  |
-# | user and returning the largest and smallest value. The input should     |
-# | be limited to integer numbers, i.e. whole-numbers. When the user has    |
-# | no more input, they can finish by typing 'done'.                        |
-# ===========================================================================
-# ''')
-
 # Main program - build the list from user input
 
 while request is True:
 	newNumber = input('Give a number or "done": ')
 	if newNumber == 'done':
 		request = False
-		# break (don't think i need this)
 	else:
 		try:
 			floatNewNumber = float(newNumber)
@@ -61,7 +50,7 @@ while request is True:
 
 # Print Maximum
 for listValue in numbersToTest:
-    if largest is None or listValue > largest :
+    if largest is None or listValue > largest:
         largest = listValue
 print('Maximum is', largest)
 
