@@ -47,5 +47,5 @@ while request is True:
 			continue
 
 print(numbersToTest)
-max(numbersToTest)
-min(numbersToTest)
+print('Maximum is', max(numbersToTest))
+print('Minimum is', min(numbersToTest))
