@@ -2,8 +2,8 @@
 
 # Initialize variables
 
-# smallest = None # variable holds current smallest value
-# largest = None # variable holds current largest value
+smallest = None # variable holds current smallest value
+largest = None # variable holds current largest value
 newNumber = 0 # variable holds new input for testing
 floatNewNumber = 0.0 # new input converted to float
 intNewNumber = 0 # new input converted to integer
@@ -59,6 +59,14 @@ while request is True:
 
 # Output
 
-# print(numbersToTest)
-print('Maximum is', max(numbersToTest))
-print('Minimum is', min(numbersToTest))
+# Print Maximum
+for listValue in numbersToTest:
+    if largest is None or listValue > largest :
+        largest = listValue
+print('Maximum is', largest)
+
+# Print Minimum
+for listValue in numbersToTest:
+    if smallest is None or listValue < smallest:
+        smallest = listValue
+print('Minimum is', smallest)
