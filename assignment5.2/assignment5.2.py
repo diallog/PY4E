@@ -26,14 +26,14 @@ def isInteger(possibleInt):
 		return 1
 
 # Obtain input from user and test values
-print('''
-===========================================================================
-| The objective of this program will be gathering numeric input from the  |
-| user and returning the largest and smallest value. The input should     |
-| be limited to integer numbers, i.e. whole-numbers. When the user has    |
-| no more input, they can finish by typing 'done'.                        |
-===========================================================================
-''')
+# print('''
+# ===========================================================================
+# | The objective of this program will be gathering numeric input from the  |
+# | user and returning the largest and smallest value. The input should     |
+# | be limited to integer numbers, i.e. whole-numbers. When the user has    |
+# | no more input, they can finish by typing 'done'.                        |
+# ===========================================================================
+# ''')
 
 # Main program - build the list from user input
 
