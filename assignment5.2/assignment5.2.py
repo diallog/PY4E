@@ -51,8 +51,8 @@ while request is True:
 		try:
 			floatNewNumber = float(newNumber)
 		except:
-			# print('''The user-provided input should be a whole-number. Please try again.''') - this was my original version
-			print('Invalid input') # this is the version required for credit (to match output in the auto grader)
+			print('''The user-provided input should be a whole-number. Please try again.''') - this was my original version
+			# print('Invalid input') # this is the version required for credit (to match output in the auto grader)
 			continue
 		# test to see if floatNewNumber is an integer
 		isIntegerResult = isInteger(floatNewNumber)
