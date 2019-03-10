@@ -14,7 +14,7 @@ def myCount(usrInput1,usrInput2):
 	for letter in usrInput1:
 		if letter == usrInput2:
 			count = count + 1
-	print(count)
+	print(count,' occurences of ',usrInput2,' were found in the submitted string.')
 
 # Get user input
 mainInput1 = input('Give me a string (word, sentence..somthing): ')
