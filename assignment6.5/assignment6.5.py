@@ -5,4 +5,5 @@ text = "X-DSPAM-Confidence:    0.8475";
 lPos = text.find('0')
 strSlice = text[lPos:]
 
-print(strSlice)
+floatSlice = float(strSlice)
+print(floatSlice)
