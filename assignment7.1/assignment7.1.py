@@ -9,4 +9,5 @@ except:
 	exit()
 
 for eaLine in fHandle:
-	print(eaLine.rstrip())
+	noWhiteLine = eaLine.rstrip()
+	print(noWhiteLine.upper())
