@@ -9,4 +9,4 @@ except:
 	exit()
 
 for eaLine in fHandle:
-	print(eaLine)
+	print(eaLine.rstrip)
