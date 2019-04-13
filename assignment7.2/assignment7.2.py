@@ -17,7 +17,7 @@ noLines = 0
 
 # start parsing for interesting lines
 for eaLine in fHandle:
-	if eaLine.startswith('From'):
+	if eaLine.startswith('X-DSPAM-Confidence:'):
 		noLines = noLines + 1
 		noWhiteLine = eaLine.rstrip()
 		print(noWhiteLine)
