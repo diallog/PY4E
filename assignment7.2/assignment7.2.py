@@ -20,4 +20,7 @@ for eaLine in fHandle:
 	if eaLine.startswith('From'):
 		noLines = noLines + 1
 		noWhiteLine = eaLine.rstrip()
-		print(noWhiteLine.upper())
+		print(noWhiteLine)
+
+# print the total number of identified noLines
+print('The total number of identified lines is: ',noLines)
