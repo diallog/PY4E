@@ -17,11 +17,11 @@ noLines = 0
 
 # start parsing for interesting lines
 for eaLine in fHandle:
-	if eaLine.startswith('X-DSPAM-Confidence:'):
+	if not eaLine.startswith('X-DSPAM-Confidence:'): continue
 		noLines = noLines + 1
 		noWhiteLine = eaLine.rstrip()
 		print(noWhiteLine)
 
 # print the total number of identified noLines
 # print('The total number of identified lines is: ',noLines)
-print('Average spam confidence: ')
+print('Average spam confidence: ',noLines)
