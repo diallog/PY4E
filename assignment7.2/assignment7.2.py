@@ -27,8 +27,8 @@ for eaLine in fHandle:
 		print('Conversion failed. Please check data and try again')
 		exit()
 	totConfidence = totConfidence + flConfInterval
-	print(totConfidence)
+#	print(totConfidence)
 
 # print the total number of identified noLines
 # print('The total number of identified lines is: ',noLines)
-print('Average spam confidence: ',totConfidence / numOfLines)
+print('Average spam confidence:',totConfidence / numOfLines)
