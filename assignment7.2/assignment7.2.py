@@ -25,4 +25,4 @@ for eaLine in fHandle:
 
 # print the total number of identified noLines
 # print('The total number of identified lines is: ',noLines)
-print('Average spam confidence: ',numOfLines)
+print('Average spam confidence: ',numOfLines + 1)
