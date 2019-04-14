@@ -21,8 +21,14 @@ for eaLine in fHandle:
 	if not eaLine.startswith('X-DSPAM-Confidence:'): continue
 	numOfLines = numOfLines + 1
 	label, confInterval = eaLine.rsplit()
+	try:
+		flConfInterval = float(confInterval)
+	except:
+		print('Conversion failed. Please check data and try again')
+		exit()
+	totConfidence = totConfidence + flConfInterval
 	print(confInterval)
 
 # print the total number of identified noLines
 # print('The total number of identified lines is: ',noLines)
-print('Average spam confidence: ',numOfLines + 1)
+print('Average spam confidence: ',numOfLines)
