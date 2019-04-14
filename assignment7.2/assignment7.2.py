@@ -20,7 +20,7 @@ totConfidence = 0
 for eaLine in fHandle:
 	if not eaLine.startswith('X-DSPAM-Confidence:'): continue
 	numOfLines = numOfLines + 1
-	noWhiteLine = eaLine.rstrip()
+	noWhiteLine = eaLine.rsplit()
 	print(noWhiteLine)
 
 # print the total number of identified noLines
