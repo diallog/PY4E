@@ -12,16 +12,17 @@ except:
 	print('File not found. Please check file path/name and try again.')
 	exit()
 
-# intialize counter
-noLines = 0
+# intialize counter and total
+numOfLines = 0
+totConfidence = 0
 
 # start parsing for interesting lines
 for eaLine in fHandle:
 	if not eaLine.startswith('X-DSPAM-Confidence:'): continue
-	noLines = noLines + 1
+	numOfLines = numOfLines + 1
 	noWhiteLine = eaLine.rstrip()
 	print(noWhiteLine)
 
 # print the total number of identified noLines
 # print('The total number of identified lines is: ',noLines)
-print('Average spam confidence: ',noLines)
+print('Average spam confidence: ',numOfLines)
