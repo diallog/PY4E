@@ -13,5 +13,5 @@ fileHandle = open(targetFile)
 print('\n')
 
 for line in fileHandle:
-	line = line.strip
+	line = line.rstrip
 	print(line)
