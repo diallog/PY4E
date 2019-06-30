@@ -10,7 +10,7 @@
 
 targetFile = input('Enter the name of the file you want to parse:')
 fileHandle = open(targetFile)
-print(\n)
+print('\n')
 
 for line in fileHandle:
 	line = line.strip
