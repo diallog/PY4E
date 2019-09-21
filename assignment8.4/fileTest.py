@@ -7,9 +7,9 @@ try:
 except:
 	print('Something bad happened. The requested file probably does not exist.')
 
-# Open the output file for writing
+# Open the output file for reading and writing
 try:
-	outputFile = open('./copyOfOriginal.txt', 'w')
+	outputFile = open('./copyOfOriginal.txt', 'r+')
 except:
 	print('Something bad happened. The requested file probably does not exist.')
 
