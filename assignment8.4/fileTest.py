@@ -15,7 +15,10 @@ except:
 
 # Copy the contents of the orginal file
 
-# Write the original contents to the output files
+# Write the original contents to the output file
+for i in orginalFile:
+	outputFile.write(i)
+
 # Show that the two files are the same
 print('This is the orginal file:')
 for i in orginalFile: print(i.rstrip())
