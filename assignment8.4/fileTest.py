@@ -12,7 +12,6 @@ try:
 	outputFile = open('./copyOfOriginal.txt', 'w')
 except:
 	print('Something bad happened. The requested file probably does not exist.')
-	break
 
 # Copy the contents of the orginal file
 # Write the original contents to the output files
