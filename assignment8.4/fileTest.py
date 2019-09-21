@@ -3,7 +3,7 @@ and write that output to another file'''
 
 # Open the original file for reading
 try:
-	orginalFile = open('./romeo.txt', 'r')
+	originalFile = open('./romeo.txt', 'r')
 except:
 	print('Something bad happened. The requested file probably does not exist.')
 
@@ -20,11 +20,11 @@ print('\n\n')
 
 # Show the original file
 print('This is the orginal file:')
-for i in orginalFile: print(i.rstrip())
+for i in originalFile: print(i.rstrip())
 print('\n\n')
 
 # Write the original contents to the output file
-for i in orginalFile:
+for i in originalFile:
 	outputFile.write(i.rstrip())
 
 # Show the output file after copying
@@ -33,5 +33,5 @@ for i in outputFile: print(i.rstrip())
 print('\n\n')
 
 # Close all the files
-orginalFile.close()
+originalFile.close()
 outputFile.close()
