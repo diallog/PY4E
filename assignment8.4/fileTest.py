@@ -25,12 +25,12 @@ print('\n\n')
 
 # Write the original contents to the output file
 for i in orginalFile:
-	outputFile.write(i.rstrip())
+	print(i.rstrip())
 
 # Show the output file after copying
-print('And here is the copy of the orginal:')
-for i in outputFile: print(i.rstrip())
-print('\n\n')
+# print('And here is the copy of the orginal:')
+# for i in outputFile: print(i.rstrip())
+# print('\n\n')
 
 # Close all the files
 orginalFile.close()
