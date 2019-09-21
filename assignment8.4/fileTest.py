@@ -17,12 +17,12 @@ except:
 
 # Write the original contents to the output files
 # Show that the two files are the same
-print("This is the orginal file:")
+print('This is the orginal file:')
 for i in orginalFile: print(i.rstrip())
-print("\n\n")
-print("And here is the copy of the orginal:")
+print('\n\n')
+print('And here is the copy of the orginal:')
 for i in outputFile: print(i.rstrip())
-print("\n\n")
+print('\n\n')
 
 # Close all the files
 orginalFile.close()
