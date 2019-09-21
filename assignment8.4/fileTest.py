@@ -25,7 +25,7 @@ print('\n\n')
 
 # Write the original contents to the output file
 for i in originalFile:
-	print(i.rstrip())
+	originalFile.readline(i)
 	outputFile.write(i.rstrip())
 
 # Show the output file after copying
