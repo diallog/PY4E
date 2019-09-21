@@ -24,10 +24,8 @@ for i in originalFile: print(i.rstrip())
 print('\n\n')
 
 # Write the original contents to the output file
-for i in originalFile:
-	print(i)
-#	originalFile.read(i)
-#	outputFile.write(i.rstrip())
+for i in originalFile:outputFile.write(i)
+print("original file copied","\n\n\")
 
 # Show the output file after copying
 print('And here is the copy of the orginal:')
