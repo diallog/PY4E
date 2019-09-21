@@ -1,7 +1,5 @@
-```
-The purpose of this script will be to open a file, copy its content
-and write that output to another file
-```
+```The purpose of this script will be to open a file, copy its content
+and write that output to another file```
 
 # Open the original file for reading
 try:
