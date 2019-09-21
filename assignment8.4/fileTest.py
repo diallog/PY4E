@@ -19,10 +19,10 @@ except:
 # Show that the two files are the same
 print("This is the orginal file:")
 for i in orginalFile: print(i.rstrip())
-print(\n)
+print("\n\n")
 print("And here is the copy of the orginal:")
 for i in outputFile: print(i.rstrip())
-print(\n)
+print("\n\n")
 
 # Close all the files
 orginalFile.close()
