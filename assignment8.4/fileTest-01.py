@@ -20,7 +20,7 @@ print('\n\n')
 
 # Show the original file
 print('This is the original file:')
-for i in originalFile: print(i)
+for i in originalFile: print(i.rstrip())
 print('\n\n')
 
 # Copy the original file to the target
