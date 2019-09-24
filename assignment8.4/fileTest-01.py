@@ -24,6 +24,7 @@ for i in originalFile: print(i.rstrip())
 print('\n\n')
 
 # Copy the original file to the target
+print('starting to copy originalFile')
 for i in originalFile:
 	print('this is line ',i)
 	outputFile.write(i)
