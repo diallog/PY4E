@@ -24,10 +24,10 @@ for i in originalFile: print(i.rstrip())
 print('\n\n')
 
 # Copy the original file to the target
-for i in originalFile:outputFile.write(i)
+for i in originalFile: outputFile.write(i)
 
 # Show the output file after copying
-print('And here is the copy of the orginal:')
+print('And here is the copy of the original:')
 for i in outputFile: print(i)
 print('\n\n')
 
