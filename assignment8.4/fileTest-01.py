@@ -20,14 +20,16 @@ print('\n\n')
 
 # Show the original file
 print('This is the original file:')
-for i in originalFile: print(i.rstrip())
+for i in originalFile:
+	print(i.rstrip())
+	outputFile.write(i)
 print('\n\n')
 
 # Copy the original file to the target
-print('starting to copy originalFile')
-for i in originalFile:
-	print('this is line ',i)
-	outputFile.write(i)
+# print('starting to copy originalFile')
+# for i in originalFile:
+#	print('this is line ',i)
+#	outputFile.write(i)
 
 # Show the output file after copying
 print('And here is the copy of the original:')
