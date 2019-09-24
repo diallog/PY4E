@@ -15,12 +15,12 @@ except:
 
 # Print the empty output files
 print('And here is the empty output file:')
-for i in outputFile: print(i.rstrip())
+for i in outputFile: print(i)
 print('\n\n')
 
 # Show the original file
 print('This is the original file:')
-for i in originalFile: print(i.rstrip())
+for i in originalFile: print(i)
 print('\n\n')
 
 # Copy the original file to the target
@@ -28,7 +28,7 @@ for i in originalFile:outputFile.write(i)
 
 # Show the output file after copying
 print('And here is the copy of the orginal:')
-for i in outputFile: print(i.rstrip())
+for i in outputFile: print(i)
 print('\n\n')
 
 # Close all the files
