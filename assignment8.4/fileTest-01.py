@@ -33,7 +33,8 @@ print('\n\n')
 
 # Show the output file after copying
 print('And here is the copy of the original:')
-for i in outputFile: print(i)
+lastTest = outputFile.read()
+print(lastTest)
 print('\n\n')
 
 # Close all the files
