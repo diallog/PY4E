@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 '''This is an exercise to write multiple lines to a file'''
 
 # set some variables
