@@ -10,7 +10,7 @@ volume = [23, 96]
 
 outputFile = open('./theVolumesAre.txt', 'a')
 
-for i in range(0,1):
-	outputFile.write('Volume' + str(i + 1) + ' is: ' + volume[i])
+for i in range(2):
+	outputFile.write('Volume' + str(i + 1) + ' is: ' + str(volume[i]))
 
 outputFile.close()

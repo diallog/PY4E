@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 '''The purpose of this script will be to open a file, copy its content
 and write that output to another file'''
 

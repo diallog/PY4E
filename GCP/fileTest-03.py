@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 '''This script will read input from MyDataFile.txt and write the output (a copy of the original file) to results.txt'''
 
 # Open the original file for reading

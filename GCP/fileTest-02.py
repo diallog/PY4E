@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 testFile = open('romeo.txt','r')
 out = open('00_test.txt','r+')
 
