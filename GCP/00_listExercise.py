@@ -5,16 +5,29 @@
 # use lists for this exercise
 
 # initialize variables
-
+listIndex = 0
+nameList = []
+ageList = []
 newName = None
 newAge = 0
 
 # get input
-newName = input ("What is the person's name?")
+newName = input ("What is the person's name? (enter 'stop' to quit collecting names.)")
 try:
-    if type(newName) == str:
-        newName.lower()
+    newName = newName.lower()
+	while newName != 'stop':
+		nameList[listIndex] = nameList.append(newName)
+		
+		newAge = input ("How old is {newName}? ".format(newName = newName.capitalize()))
+		newAge = int(newAge)
+		ageList[listIndex] = ageList.append(newAge)
+		
+		print ("Thank you. Name and age recorded for {newName}.".format(newName = newName))
+		newName = input ("What is the person's name? (enter 'stop' to quit collecting names.)")
+		newName = newName.lower()
 except:
-    print ("Expected to get a name. This doesn't look like a name.")
+    print ("Something did not go right. Try again.")
 	
-print ("The name just received is: "{newName}.format(newName=newName))
+print (nameList)
+print (ageList)
+	
