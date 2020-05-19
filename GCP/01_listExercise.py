@@ -4,6 +4,9 @@
 # then report who is the oldest person
 # use lists for this exercise
 
+import os
+os.system('clear')
+
 # initialize variables
 nameList = []
 ageList = []
@@ -33,4 +36,5 @@ maxIndex = ageList.index(maxAge)
 
 # report results
 print ("\n")
-print ("{oldest} is the oldest person with an age of {age}.".format(oldest = nameList[maxIndex].capitalize(), age = ageList[maxIndex]))
+print ("{oldest} is the oldest person with an age of {age}."
+	   .format(oldest = nameList[maxIndex].capitalize(), age = ageList[maxIndex]))
