@@ -5,9 +5,9 @@
 import os
 os.system('clear')
 
-with open ('00_test.txt', 'r') as inputForPlay:
-	#read the file and output to a list
-	theFile = inputForPlay.read()
+# with open ('00_test.txt', 'r') as inputForPlay:
+	# read the file and output to a list
+	# theFile = inputForPlay.read()
 
 fileList = theFile.split()
 print("The original list is: \n", fileList, "\n")
