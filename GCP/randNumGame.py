@@ -48,3 +48,6 @@ if outcome == status[0]:
     print('Well done! Come back and play again another day!\n')
 else:
     print('\nCome back when you grow a spine.\n')
+
+### Opportunties for improvement ###
+# Create 'easy'. 'med' 'hard' option for player to choose (harder has broader number range)
