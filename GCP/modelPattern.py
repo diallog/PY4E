@@ -8,6 +8,7 @@ def a_function():
 def Main():
     # do the main stuff
 
-if __name__ == '__main__'
+if __name__ == '__main__':
     # do all the stuff; at a minimum, this will invoke Main()
     # if Main() is not defined as fucntion, that block can just go here
+    Main()
