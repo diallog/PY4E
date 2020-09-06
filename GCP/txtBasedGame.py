@@ -4,12 +4,14 @@
 
 from random import choice
 
-def ContinueGame(current_score, goal_score = 100):
+
+def ContinueGame(current_score, goal_score=100):
     # Return FALSE if game should end, TRUE if game is not over
     if (current_score >= goal_score):
         return False
     else:
         return True
+
 
 def ConvertLetterToCol(Col):
     if Col == 'a':
@@ -32,6 +34,7 @@ def ConvertLetterToCol(Col):
         # not a valid column
         return -1
 
+
 def DoRound(board):
     # Perform one round of the game
     # Display current board
@@ -44,6 +47,7 @@ def DoRound(board):
     global turn
     turn += 1
 
+
 def DrawBoard(board):
     # Display the board to the screen
     linetodraw = ""
@@ -51,7 +55,7 @@ def DrawBoard(board):
     print("\n\n\n")
     print("-----------------------------------")
     # Draw rows top down (8 to 1)
-    for i in range(7,-1,-1):
+    for i in range(7, -1, -1):
         # Draw each rows
         linetodraw = ""
         linetodraw += str(i+1)
@@ -62,7 +66,8 @@ def DrawBoard(board):
         print("-----------------------------------")
     print("    a   b   c   d   e   f   g   h")
     global score
-    print("\nCurrent Score: ",score)
+    print("\nCurrent Score: ", score)
+
 
 def DropPieces(board):
     # Fill blanks with random pieces
@@ -76,15 +81,17 @@ def DropPieces(board):
         for i in range(len(listofpieces)):
             board[i][j] = listofpieces[i]
         # fill in remainder of column with 0s
-        for i in range(len(listofpieces),8):
+        for i in range(len(listofpieces), 8):
             board[i][j] = 0
+
 
 def FillBlanks(board):
     # Fill blanks with random pieces
     for i in range(8):
         for j in range(8):
             if (board[i][j] == 0):
-                board[i][j] = choice(['Q','R','S','T','U'])
+                board[i][j] = choice(['Q', 'R', 'S', 'T', 'U'])
+
 
 def GetMove():
     # Get the move from the user
@@ -95,11 +102,13 @@ def GetMove():
         move = input("That's not a valid move! Enter another move: ")
     return move
 
+
 def InitializeGrid(board):
     # Initialize grid utilizing random values
-    for i in range (8):
-        for j in range (8):
-            board[i][j] = choice(['Q','R','S','T','U'])
+    for i in range(8):
+        for j in range(8):
+            board[i][j] = choice(['Q', 'R', 'S', 'T', 'U'])
+
 
 def Initialize(board):
     # Initialize game
@@ -112,6 +121,7 @@ def Initialize(board):
     global turn
     turn = 1
 
+
 def IsValid(move):
     # Returns true if the move is valid, false otherwise
     # Check length of move
@@ -119,11 +129,11 @@ def IsValid(move):
         return False
 
     # CHeck that the space and direction are valid
-    if not (move[0] in ['a','b','c','d','e','f','g','h']):
+    if not (move[0] in ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']):
         return False
-    if not (move[1] in ['1','2','3','4','5','6','7','8']):
+    if not (move[1] in ['1', '2', '3', '4', '5', '6', '7', '8']):
         return False
-    if not (move[2] in ['u','d','l','r']):
+    if not (move[2] in ['u', 'd', 'l', 'r']):
         return False
 
     # Check that the direction is valid for the given row / column
@@ -143,35 +153,36 @@ def IsValid(move):
     # no problems found, so the move is valid
     return True
 
+
 def RemovePieces(board):
-    #Remove 3-in-a-row and 3-in-a-column pieces
+    # Remove 3-in-a-row and 3-in-a-column pieces
     # Create board to store remove or not
-    remove = [[0,0,0,0,0,0,0,0],
-              [0,0,0,0,0,0,0,0],
-              [0,0,0,0,0,0,0,0],
-              [0,0,0,0,0,0,0,0],
-              [0,0,0,0,0,0,0,0],
-              [0,0,0,0,0,0,0,0],
-              [0,0,0,0,0,0,0,0],
-              [0,0,0,0,0,0,0,0],]
+    remove = [[0, 0, 0, 0, 0, 0, 0, 0],
+              [0, 0, 0, 0, 0, 0, 0, 0],
+              [0, 0, 0, 0, 0, 0, 0, 0],
+              [0, 0, 0, 0, 0, 0, 0, 0],
+              [0, 0, 0, 0, 0, 0, 0, 0],
+              [0, 0, 0, 0, 0, 0, 0, 0],
+              [0, 0, 0, 0, 0, 0, 0, 0],
+              [0, 0, 0, 0, 0, 0, 0, 0], ]
 
     # Go through rows
     for i in range(8):
-        for j in range (6):
+        for j in range(6):
             if (board[i][j] == board[i][j+1]) and (board[i][j] == board[i][j+2]):
                 # three in a row are the same!
-                remove[i][j] = 1;
-                remove[i][j+1] = 1;
-                remove[i][j+2] = 1;
+                remove[i][j] = 1
+                remove[i][j+1] = 1
+                remove[i][j+2] = 1
 
     # Go through columns
     for j in range(8):
-        for i in range (6):
+        for i in range(6):
             if (board[i][j] == board[i+1][j]) and (board[i][j] == board[i+2][j]):
                 # three in a row are the same!
-                remove[i][j] = 1;
-                remove[i+1][j] = 1;
-                remove[i+2][j] = 1;
+                remove[i][j] = 1
+                remove[i+1][j] = 1
+                remove[i+2][j] = 1
 
     # Elimiate marked locations
     global score
@@ -183,6 +194,7 @@ def RemovePieces(board):
                 score += 1
                 removed_any = True
     return removed_any
+
 
 def SwapPieces(board, move):
     # Swap pieces on board according to move
@@ -209,6 +221,7 @@ def SwapPieces(board, move):
     board[origrow][origcol] = board[newrow][newcol]
     board[newrow][newcol] = temp
 
+
 def Update(board, move):
     # Update board according to move
     SwapPieces(board, move)
@@ -218,19 +231,20 @@ def Update(board, move):
         DropPieces(board)
         FillBlanks(board)
 
+
 def Main():
     # Define variables
     score = 0
     turn = 0
     goalscore = 100
-    board = [[0,0,0,0,0,0,0,0],
-             [0,0,0,0,0,0,0,0],
-             [0,0,0,0,0,0,0,0],
-             [0,0,0,0,0,0,0,0],
-             [0,0,0,0,0,0,0,0],
-             [0,0,0,0,0,0,0,0],
-             [0,0,0,0,0,0,0,0],
-             [0,0,0,0,0,0,0,0],]
+    board = [[0, 0, 0, 0, 0, 0, 0, 0],
+             [0, 0, 0, 0, 0, 0, 0, 0],
+             [0, 0, 0, 0, 0, 0, 0, 0],
+             [0, 0, 0, 0, 0, 0, 0, 0],
+             [0, 0, 0, 0, 0, 0, 0, 0],
+             [0, 0, 0, 0, 0, 0, 0, 0],
+             [0, 0, 0, 0, 0, 0, 0, 0],
+             [0, 0, 0, 0, 0, 0, 0, 0], ]
 
     # Initialize game
     Initialize(board)
@@ -239,6 +253,7 @@ def Main():
     while ContinueGame(score, goalscore):
         # Do round of game
         DoRound(board)
+
 
 if __name__ == '__main__':
     Main()
